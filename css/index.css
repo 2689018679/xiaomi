@@ -353,12 +353,12 @@ li{
     text-align: center;
 }
 .purchase_right li .price{
-    height: 69px;
+    height: 24px;
     width: 100%;
 }
 .purchase_right .price h2{
-    width: 40px;
-    height: 69px;
+    width: 43px;
+    height: 24px;
     padding-left: 70px;
     font-size: 12px;
     float: left;
@@ -563,9 +563,13 @@ li{
     padding-top: 40px;
 }
 .electrical_bottom li:last-child .top_left{
-    width: 126px;
+    width: 92px;
     height: 104px;
     float: left;
+    padding-left: 30px;
+}
+.electrical_bottom li:last-child p{
+    text-align:left;
 }
 .electrical_bottom li:last-child .top_left p{
     font-size: 12px;
@@ -620,13 +624,13 @@ li{
     text-align: center;
 }
 .electrical_bottom li .price{
-    height: 69px;
+    height: 24px;
     width: 100%;
 }
 .electrical_bottom .price h2{
     width: 50px;
-    height: 69px;
-    padding-left: 70px;
+    height: 24px;
+    padding-left: 85px;
     font-size: 12px;
     float: left;
     color:#FF6700;
@@ -972,6 +976,7 @@ li{
     margin-right: 14px;
     position: relative;
     transition:all .2s linear;
+    background: #fff;
 }
 .video_bottom li:hover{
     box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
@@ -1282,4 +1287,24 @@ li{
     height:28px;
      display: block;
     float: right;
+}
+ .recommend{
+     background: transparent;
+ }
+.recommend .purchase_right img{
+    width: 140px;
+    height: 140px;
+    display: block;
+    float: left;
+    margin: 45px 50px;
+}
+.recommend .purchase_right {
+    background: #F5F5F5;
+}
+.recommend .purchase_right li{
+background: #fff;
+}
+.recommend{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
