@@ -24,6 +24,10 @@ li{
     margin: 0 auto;
     overflow: hidden;
 }
+.img1 img{
+    width: 100%;
+    display: block;
+}
 .header{
     width:100%;
     height: 40px;
@@ -69,47 +73,43 @@ li{
 .header_right li{
     font-size: 12px;
 }
-.header_right .cart{
+.cart{
     width: 120px;
     height: 100%;
     float: right;
-    background: #424242;
+    background:#424242;
     list-style: none;
     text-align: center;
     line-height: 40px;
     position: relative;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.cart span{
+    color: #b0b0b0;
+ }
+.cart:hover span{
+    color: #ff6700;
 }
 .header_right .cart .icon-gouwuche{
     font-size: 17px;
     color: #b0b0b0;
     margin-right: 4px;
 }
-.header_right .cart1{
+.cart1{
     width: 316px;
-    height: 97px;
+    height: 0;
     position: absolute;
     left: -196px;
-    display: none;
     text-align: center;
     background: #fff;
     line-height: 97px;
     color: #424242;
     font-size: 12px;
     transition:all 2s;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .1)
+    z-index: 9;
+    overflow: hidden;
  }
-.header_right .cart {
-    color: #b0b0b0;
-    font-size: 12px;
-}
-.header_right .cart:hover{
-    background: #fff;
-    color: #FF6700;
-}
-.header_right .cart:hover .cart1{
-    display: block;
-    z-index: 6;
-}
 .header_right .cart:hover .icon-gouwuche{
     color: #FF6700;
 }
@@ -390,7 +390,6 @@ li{
     float: left;
 }
 .electrical_top .right{
-    width: 500px;
     height: 59px;
     float: right;
 }
@@ -425,26 +424,31 @@ li{
     display: block;
     height: 16px;
     font-size: 16px;
-    float: right;
+    float: left;
     margin:20px 30px 0 0;
     line-height: 20px;
     padding-bottom: 4px;
     border-bottom: 2px solid none;
-}
-.electrical_top .right a:first-child{
-    margin-right: 0;
 }
 .electrical_top .right a:hover{
     color: #ff6700;
     border-bottom: 2px solid #FF6700;
 }
 .electrical_top .right .word{
-    margin-left: 0;
+    margin-right: 0;
 }
 .electrical_bottom{
     width: 100%;
     height: 613px;
     background: #f5f5f5;
+    position: relative;
+}
+.electrical_bottom ul{
+    width: 100%;
+    height: 613px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .electrical_bottom .left{
     width: 230px;
@@ -452,25 +456,35 @@ li{
     padding-right: 14px;
     float: left;
 }
-
+.electrical_bottom  .xxkbox{
+    width: 982px;
+    height: 613px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .electrical_bottom .left img{
     display: block;
     width: 230px;
     height: 613px;
 }
-.electrical_bottom .right2 li:nth-child(1) img,.electrical_bottom .right2 li:nth-child(6) img,.electrical_bottom .phone li:last-child img{
+.electrical_bottom .right2 li:nth-child(1) img,.electrical_bottom .right2 li:nth-child(6) img,.electrical_bottom .right2 li:last-child img{
     width: 160px;
     height: 160px;
     display: block;
     margin: 40px auto 0;
 }
-.electrical_bottom .phone li:last-child {
+.electrical_bottom .right2 li:last-child {
     width: 235px;
     height: 300px;
     float: left;
     margin:0 0 13px 0;
 }
-.electrical_bottom .phone ul li img{
+.electrical_bottom .right2 ul li img{
     width: 160px;
     height: 160px;
     display: block;
@@ -482,13 +496,23 @@ li{
     background: #f5f5f5;
     float: left;
 }
-
+.electrical_bottom .xxkbox{
+    width: 982px;
+    height: 613px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .electrical_bottom li{
     width: 235px;
     height: 300px;
     background: #ffffff;
     float: left;
-    margin:0 14px 13px 0;
+    margin-bottom:13px;
     position: relative;
     transition:all .2s;
     overflow: hidden;
@@ -547,12 +571,12 @@ li{
     height: 150px;
     margin:40px 42px 0;
 }
-.electrical_bottom li:nth-child(1) img,.electrical_bottom li:nth-child(6) img{
+.electrical_bottom .left li img{
     width: 234px;
     height: 300px;
     margin: 0;
 }
-.electrical_bottom li:last-child img{
+.electrical_bottom .xxkbox li:last-child img{
     width: 80px;
     height: 80px;
     margin:0;
@@ -647,6 +671,16 @@ li{
     margin:0 auto;
     position: relative;
 }
+.banner_box{
+    width: 992px;
+    height: 460px;
+    z-index: 15;
+    position: absolute;
+    top:0;
+    left:234px;
+    background: #fff;
+    display: none;
+}
 .banner_left{
     width: 234px;
     height: 420px;
@@ -654,6 +688,7 @@ li{
     float: left;
     background-color: rgba(0,0,0,0.6);
     position: absolute;
+    z-index: 15;
 }
 .banner_left li{
     width: 180px;
@@ -686,6 +721,7 @@ li{
     width: 41px;
     height: 69px;
     position: absolute;
+    z-index: 13;
     left:234px;
     top:0;
     bottom:0;
@@ -700,6 +736,7 @@ li{
     width: 41px;
     height: 69px;
     position: absolute;
+    z-index: 13;
     right:0px;
     top:0;
     bottom:0;
@@ -709,6 +746,10 @@ li{
 }
 .banner .btn2:hover{
     background: url("../img/bg.png") no-repeat -42px 0;
+}
+.banner .whole{
+    width: 100%;
+    height: 100%;
 }
 .banner .whole li{
     width: 100%;
@@ -726,6 +767,7 @@ li{
     position: absolute;
     right: 35px;
     bottom: 25px;
+    z-index: 13;
 }
 .banner .spot li{
     width: 6px;
@@ -736,12 +778,12 @@ li{
     float: left;
     margin-right: 10px;
 }
-.banner .spot li:hover{
-    border: 2px solid #8C8379;
-    background: #F1F1F1;
-}
 .banner .spot li:last-child{
     margin-right:0;
+}
+.banner .spot .hot{
+    border: 2px solid #8C8379;
+    background: #fff;
 }
 .fashou{
     width: 1226px;
