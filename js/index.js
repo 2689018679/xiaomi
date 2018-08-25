@@ -26,7 +26,7 @@ window.onload=function (){
 	}
 
     ////////////////选项卡///////////////////////
-    
+
     function xxkbox(electricalTop,electrical_bottom){
         let right=electricalTop.getElementsByClassName("right")[0];
         let a=right.getElementsByTagName("a");
@@ -47,6 +47,15 @@ window.onload=function (){
     let electricalTop1=document.getElementsByClassName("electrical_top")[2];
     let electrical_bottom1=document.getElementsByClassName("electrical_bottom")[2];
     xxkbox(electricalTop1,electrical_bottom1);
+    let electricalTop2=document.getElementsByClassName("electrical_top")[3];
+    let electrical_bottom2=document.getElementsByClassName("electrical_bottom")[3];
+    xxkbox(electricalTop2,electrical_bottom2);
+    let electricalTop3=document.getElementsByClassName("electrical_top")[4];
+    let electrical_bottom3=document.getElementsByClassName("electrical_bottom")[4];
+    xxkbox(electricalTop3,electrical_bottom3);
+    let electricalTop4=document.getElementsByClassName("electrical_top")[5];
+    let electrical_bottom4=document.getElementsByClassName("electrical_bottom")[5];
+    xxkbox(electricalTop4,electrical_bottom4);
 
     ////////////////////////轮播图 //////////////////////////////
     let banner=document.getElementsByClassName("banner")[0];
@@ -58,8 +67,6 @@ window.onload=function (){
 
     let btn_left=banner.getElementsByClassName("btn1")[0];
     let btn_right=banner.getElementsByClassName("btn2")[0];
-
-    console.log(lis2);
 
     let num=0;
     let t=setInterval(move,1000);
@@ -115,4 +122,217 @@ window.onload=function (){
     }
 
     ////////////////////////双下标轮播图/////////////////////////////
+
+    function lbt(banner,lis1,spots,btn,btnr,width){
+        let next=0;
+        let now=0;
+        let flag=true;
+        let t=setInterval(move,1000);
+        function move() {
+            next++;
+            if(next==lis1.length){
+                next=0;
+            }
+            lis1[next].style.left=width+"px";
+            animate (lis1[now],{left:-width});
+            animate (lis1[next],{left:0},function () {
+                flag=true;
+            });
+            for(let i=0;i<spots.length;i++){
+                spots[i].className="";
+            }
+            spots[next].className="hot";
+            now=next;
+        }
+        function move1() {
+            next--;
+            if(next<0){
+                next=lis1.length-1;
+            }
+            lis1[next].style.left=-width+"px";
+            animate (lis1[now],{left:width});
+            animate (lis1[next],{left:0},function () {
+                flag=true;
+            });
+            for(let i=0;i<spots.length;i++){
+                spots[i].className="";
+            }
+            spots[next].className="hot";
+            now=next;
+        }
+        banner.onmouseenter=function () {
+            clearInterval(t);
+        }
+        banner.onmouseleave=function () {
+            t=setInterval(move,1000);
+        }
+        btn.onclick=function () {
+            if(flag==false){
+                return;
+            }
+            move1();
+            flag=false;
+        }
+        btnr.onclick=function () {
+            if(flag==false){
+                return;
+            }
+            flag=false;
+            move();
+        }
+        /////////////小点点击///////////////
+        for(let i=0;i<spots.length;i++){
+            spots[i].onclick=function () {
+                if (now == i) {
+                    return;
+                } else if (now < i) {
+                    lis1[next].style.left = width+"px";
+                    animate(lis1[now], {left: -width});
+                    animate(lis1[i], {left: 0});
+                    for(let i=0;i<spots.length;i++){
+                        spots[i].className="";
+                    }
+                    spots[i].className = "hot";
+                } else {
+                    lis1[next].style.left = -width+"px";
+                    animate(lis1[now], {left: width});
+                    animate(lis1[i], {left: 0});
+                    for(let i=0;i<spots.length;i++){
+                        spots[i].className="";
+                    }
+                    spots[i].className = "hot";
+                }
+                now = next = i;
+            }
+        }
+    }
+
+
+
+    function lbt1(banner,lis1,spots,btn,btnr,width){
+        let next=0;
+        let now=0;
+        let flag=true;
+        function move() {
+            next++;
+            if(next==lis1.length){
+                next=0;
+            }
+            lis1[next].style.left=width+"px";
+            animate (lis1[now],{left:-width});
+            animate (lis1[next],{left:0},function () {
+                flag=true;
+            });
+            for(let i=0;i<spots.length;i++){
+                spots[i].className="";
+            }
+            spots[next].className="hot";
+            now=next;
+        }
+        function move1() {
+            next--;
+            if(next<0){
+                next=lis1.length-1;
+            }
+            lis1[next].style.left=-width+"px";
+            animate (lis1[now],{left:width});
+            animate (lis1[next],{left:0},function () {
+                flag=true;
+            });
+            for(let i=0;i<spots.length;i++){
+                spots[i].className="";
+            }
+            spots[next].className="hot";
+            now=next;
+        }
+        btn.onclick=function () {
+            if(flag==false){
+                return;
+            }
+            if(next==0){
+                return;
+            }
+            move1();
+            flag=false;
+        }
+        btnr.onclick=function () {
+            if(flag==false){
+                return;
+            }
+            if(next==lis1.length-1){
+                return;
+            }
+            flag=false;
+            move();
+        }
+        /////////////小点点击///////////////
+        for(let i=0;i<spots.length;i++){
+            spots[i].onclick=function () {
+                if (now == i) {
+                    return;
+                } else if (now < i) {
+                    lis1[next].style.left = width+"px";
+                    animate(lis1[now], {left: -width});
+                    animate(lis1[i], {left: 0});
+                    spots[now].className="";
+                    spots[i].className = "hot";
+                } else {
+                    lis1[next].style.left = -width+"px";
+                    animate(lis1[now], {left: width});
+                    animate(lis1[i], {left: 0});
+                    spots[now].className="";
+                    spots[i].className = "hot";
+                }
+                now = next = i;
+            }
+        }
+    }
+
+
+    //
+    // let banner=document.querySelector(".banner");
+    // let lis1=document.querySelectorAll(".banner .whole li");
+    // let spots=document.querySelectorAll(".spot li");
+    //
+    // let btn=document.querySelector(".btn1");
+    // let btnr=document.querySelector(".btn2");
+    // let width=parseInt(getComputedStyle(banner,null).width);
+    // console.log(width);
+    // lbt(banner,lis1,spots,btn,btnr,width);
+
+
+    let content=document.querySelector(".content");
+    let content_bottom=document.querySelectorAll(".content .content_bottom li");
+
+    let contentBox=content_bottom[0].querySelectorAll(".content_bottom li .contentBox");
+    let spots1=content_bottom[0].querySelectorAll(".spot span");
+    let btnl1=content_bottom[0].querySelector(".paging1");
+    let btnr1=content_bottom[0].querySelector(".paging2");
+    console.log(btnl1,btnr1);
+    let width1=parseInt(getComputedStyle(content,null).width);
+    lbt1(content,contentBox,spots1,btnl1,btnr1,width1);
+
+    let contentBox2=content_bottom[1].querySelectorAll(".content_bottom li .contentBox");
+    let spots2=content_bottom[1].querySelectorAll(".spot span");
+    // console.log(content2);
+    let btnl2=content_bottom[1].querySelector(".paging1");
+    let btnr2=content_bottom[1].querySelector(".paging2");
+    lbt1(content,contentBox2,spots2,btnl2,btnr2,width1);
+    //
+    let contentBox3=content_bottom[2].querySelectorAll(".content_bottom li .contentBox");
+    let spots3=content_bottom[2].querySelectorAll(".spot span");
+    // console.log(content2);
+    let btnl3=content_bottom[2].querySelector(".paging1");
+    let btnr3=content_bottom[2].querySelector(".paging2");
+    lbt1(content,contentBox3,spots3,btnl3,btnr3,width1);
+
+    let contentBox4=content_bottom[3].querySelectorAll(".content_bottom li .contentBox");
+    let spots4=content_bottom[3].querySelectorAll(".spot span");
+    // console.log(content2);
+    let btnl4=content_bottom[3].querySelector(".paging1");
+    let btnr4=content_bottom[3].querySelector(".paging2");
+    lbt1(content,contentBox4,spots4,btnl4,btnr4,width1);
+
+
+
 }

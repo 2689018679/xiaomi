@@ -19,8 +19,8 @@ li{
     color: #C0C0C0;
 }
 .img1{
-    width: 100%px;
-    height: 120px;
+    width: 100%;
+    height: 98px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -459,7 +459,6 @@ li{
 .electrical_bottom  .xxkbox{
     width: 982px;
     height: 613px;
-    background: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -499,7 +498,6 @@ li{
 .electrical_bottom .xxkbox{
     width: 982px;
     height: 613px;
-    background: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -670,9 +668,9 @@ li{
     height: 460px;
     margin:0 auto;
     position: relative;
+    overflow: hidden;
 }
 .banner_box{
-    width: 992px;
     height: 460px;
     z-index: 15;
     position: absolute;
@@ -680,6 +678,38 @@ li{
     left:234px;
     background: #fff;
     display: none;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+}
+.banner_box .bannerWord{
+    height: 460px;
+    display: flex;
+}
+.banner_box .bannerWord .lie{
+    width: 265px;
+    height: 460px;
+}
+.banner_box a{
+    display: block;
+    width: 225px;
+    height: 40px;
+    padding:18px 20px;
+}
+.banner_box .bannerWord .lie a span{
+    display: inline-block;
+    font-size:15px;
+    line-height: 40px;
+    color: #000;
+    font-weight: normal;
+    float: left;
+}
+.banner_box a img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 8px;
 }
 .banner_left{
     width: 234px;
@@ -715,7 +745,9 @@ li{
 .banner .whole ul{
     width: 100%;
     height: 100%;
-    position: relative;
+}
+.banner .whole li{
+    position: absolute;
 }
 .banner .btn1{
     width: 41px;
@@ -828,6 +860,7 @@ li{
     float: left;
     margin-right: 14px;
     position: relative;
+    overflow: hidden;
     transition:all .2s linear;
 }
 .content_bottom li:hover{
@@ -848,6 +881,18 @@ li{
     margin-bottom:auto;
     display: none;
     background: rgba(66, 66, 66, .6)
+}
+.content_bottom li .contentBox{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    position: absolute;
+    top:0;
+    left: 296px;
+}
+.content_bottom li .spot .hot{
+    background: #fff;
+    border:2px solid #ff6700;
 }
 .content_bottom li .paging1{
     left: 0;
@@ -931,7 +976,6 @@ li{
 }
 .content_bottom li{
     height: 416px;
-    padding-top: 45px;
     border-top: 1px solid #FF6700;
     text-align: center;
     background: white;
@@ -940,27 +984,32 @@ li{
 .content_bottom .spot{
     width: 76px;
     height: 14px;
-    margin: 34px auto 0;
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    margin:0 auto
 }
 .content_bottom .spot span{
     display: block;
     float: left;
-    width: 5px;
-    height: 5px;
+    width: 9px;
+    height: 10px;
+    box-sizing: border-box;
     border-radius: 50%;
     margin-right: 10px;
-    border: 2px solid transparent;
     background: #B0B0B0;
 }
 
 .content_bottom .spot span:hover{
-    border: 2px solid #FF6700;
+    background: #FF6700;
 }
 .content_bottom li h2{
     width: 276px;
     height: 24px;
     margin: 0 10px 18px;
     font-size: 15px;
+    font-weight: normal;
     color: #FF6700;
     line-height: 24px;
     text-align: center;
@@ -987,6 +1036,28 @@ li{
     height: 21px;
     margin: 0 10px 10px;
     font-size: 12px;
+}
+.content_bottom li .paragraph3{
+    display: block;
+    width: 276px;
+    height: 21px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #b4b2b2;
+}
+.content_bottom li .paragraph4{
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 5px auto 30px;
+    font-size: 13px;
+    color: #ff6700;
+    line-height: 30px;
+    border: 1px solid #ff6700;
+}
+.content_bottom li .paragraph4:hover{
+    background: #ff6700;
+    color: #fff;
 }
 .content_bottom li img{
     display: block;
