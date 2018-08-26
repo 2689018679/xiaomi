@@ -271,6 +271,7 @@ window.onload=function (){
                 if (now == i) {
                     return;
                 } else if (now < i) {
+
                     lis1[next].style.left = width+"px";
                     animate(lis1[now], {left: -width});
                     animate(lis1[i], {left: 0});
