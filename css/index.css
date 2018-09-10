@@ -117,6 +117,7 @@ li{
     width: 1231px;
     height: 100px;
     margin: 0 auto;
+    position: relative;
 }
 .nav_left{
     width: 200px;
@@ -133,6 +134,7 @@ li{
     width: 650px;
     height: 100%;
     float: left;
+    position: relative;
 }
 .nav_top li {
     float: left;
@@ -152,6 +154,76 @@ li{
 .nav_top .list1{
     padding-left:0;
     margin-left: 0;
+}
+.nav_top li  .nav_topBox{
+    width: 1920px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+     background: #fff;
+    top:100px;
+    left:-542px;
+    z-index: 30;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+     transition: all .2s;
+}
+.nav_top li  .nav_topBox ul{
+    width: 1231px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.nav_top li .nav_topBox ul .solid{
+    width: 1px;
+    height: 100px;
+    background: #ccc;
+    margin-top: 35px;
+}
+.nav_top li .nav_topBox li{
+    width: 180px;
+    height: 195px;
+    padding:35px 12px 0;
+    position: relative;
+}
+.nav_top li .nav_topBox li img{
+    display: block;
+    width: 160px;
+    height: 110px;
+    margin: 0 auto;
+}
+.nav_top li .nav_topBox li span{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 15px;
+    margin-top: 15px;
+}
+.nav_top li .nav_topBox li p{
+    text-align: center;
+    font-size: 12px;
+    color: #ff6700;
+    margin-top: 4px;
+    line-height: 15px;
+}
+.nav_top li .nav_topBox li div{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top:0;
+    left: 0;
+    text-align: center;
+}
+.nav_top li .nav_topBox li .xp{
+    display: inline-block;
+    height: 18px;
+    padding: 1px 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    margin: 0 auto;
 }
 .nav_right{
     width:296px;
@@ -231,7 +303,8 @@ li{
     text-align: center;
     float: left;
     margin-top: 10px;
-    border: 1px solid black;
+    margin-left: -1px;
+    border: 1px solid #ccc;
 }
 .purchase h2{
     width:100px;
@@ -239,6 +312,7 @@ li{
     font-size:20px;
     color: #333333;
     float: left;
+    font-weight: normal;
 }
 .purchase_left{
     width:236px;
@@ -315,6 +389,15 @@ li{
     height: 340px;
     background: #FFFFFF;
     float: right;
+    overflow: hidden;
+}
+.purchase_right ul{
+    width: 973px;
+    height: 340px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    transition: all .3s;
 }
 .purchase_right li{
     width:230.5px;
@@ -1341,6 +1424,7 @@ li{
 }
 .bar a:last-child li{
     margin-top: 14px;
+    display: none;
 }
 .bar li i{
     display: block;

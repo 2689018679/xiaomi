@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/base.css">
     <script src="js/animate.js"></script>
+    <script src="js/jQuery.js"></script>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_773947_a7tddc7iiur.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
@@ -18,11 +19,12 @@
         <a href=""><li><i class="iconfont icon-gerenzhongxin"></i>个人中心</li></a>
         <a href=""><li><i class="iconfont icon-lianxikefu"></i>联系客服</li></a>
         <a href=""><li><i class="iconfont icon-gouwuche"></i>购物车</li></a>
-        <a href=""><li><i class="iconfont icon-huidingbu"></i>回顶部</li></a>
+        <a href="#head"><li><i class="iconfont icon-huidingbu"></i>回顶部</li></a>
     </ul>
 <!-- 右侧客服结束 -->
 
 <!--头部广告图片-->
+<a name="head">
 <div class="img1">
     <img src="./img/toubu.jpg" alt="">
 </div>
@@ -70,7 +72,48 @@
     </div></a>
     <div class="nav_top">
         <ul>
-            <li class="list1"><a href="">小米手机</a></li>
+            <li class="list1"><a href="">小米手机</a>
+                <div class="nav_topBox">
+                    <ul>
+                        <li>
+                            <img src="img/headerBox.png" alt="">
+                            <span>小米8</span>
+                            <p>2699元</p>
+                            <div><span class="xp">新品</span></div>
+                        </li>
+                        <div class="solid"></div>
+                        <li>
+                            <img src="img/headerBox2.png" alt="">
+                            <span>小米8 SE</span>
+                            <p>1799元</p>
+                        </li>
+                        <div class="solid"></div>
+                        <li>
+                            <img src="img/headerBox3.png" alt="">
+                            <span>小米Max 3</span>
+                            <p>1699元</p>
+                        </li>
+                        <div class="solid"></div>
+                        <li>
+                            <img src="img/headerBox4.png" alt="">
+                            <span>小米Mix 2S</span>
+                            <p>3299元</p>
+                        </li>
+                        <div class="solid"></div>
+                        <li>
+                            <img src="img/headerBox5.png" alt="">
+                            <span>小米Mix 2</span>
+                            <p>2599元</p>
+                        </li>
+                        <div class="solid"></div>
+                        <li>
+                            <img src="img/headerBox6.jpg" alt="">
+                            <span>小米6X</span>
+                            <p>1399元</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="">红米</a></li>
             <li><a href="">电视</a></li>
             <li><a href="">笔记本</a></li>
@@ -80,7 +123,9 @@
             <li><a href="">智能硬件</a></li>
             <li><a href="">服务</a></li>
             <li><a href="" class="list">社区</a></li>
+
         </ul>
+
     </div>
     <div class="nav_right">
         <input type="text" name="" maxlength="" class="left">
@@ -336,8 +381,8 @@
     <div class="purchase_top">
         <h2>小米闪购</h2>
         <div class="right">
-            <a href=""><span>&lt</span></a>
-            <a href=""><span>&gt</span></a>
+            <span>&lt</span>
+            <span>&gt</span>
         </div>
     </div>
     <a href=""><div class="purchase_left">
@@ -360,6 +405,138 @@
     </div></a>
     <div class="purchase_right">
         <ul>
+            <a href=""><li style="border-top:1px solid #FFAC13;">
+                <div class="img1">
+                    <img src="img/purchase1.png" alt="">
+                </div>
+                <a class="a1">米家随身风扇 白色</a>
+                <h3>能放在口袋的小风扇</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #83C44E;">
+                <div class="img1">
+                    <img src="img/purchase2.png" alt="">
+                </div>
+                <a class="a1">最生活毛巾·青春系列 白色</a>
+                <h3>3秒吸水，杀菌无刺激</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #2196F3;">
+                <div class="img1">
+                    <img src="img/purchase3.png" alt="">
+                </div>
+                <a class="a1">小米小爱音响mini 白色</a>
+                <h3>能听会说的人工智能音响</h3>
+                <div class="price">
+                    <h2>149元</h2>
+                    <h2 class="right">169元</h2>
+                </div>
+            </li></a>
+            <a href=""><li class="list" style="border-top:1px solid #E53935;">
+                <div class="img1">
+                    <img src="img/purchase4.png" alt="">
+                </div>
+                <a class="a1">小米移动电源10000mAh高配...</a>
+                <h3>轻薄设计，轻松出行</h3>
+                <div class="price">
+                    <h2>139元</h2>
+                    <h2 class="right">149元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #FFAC13;">
+                <div class="img1">
+                    <img src="img/purchase1.png" alt="">
+                </div>
+                <a class="a1">米家随身风扇 白色</a>
+                <h3>能放在口袋的小风扇</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #83C44E;">
+                <div class="img1">
+                    <img src="img/purchase2.png" alt="">
+                </div>
+                <a class="a1">最生活毛巾·青春系列 白色</a>
+                <h3>3秒吸水，杀菌无刺激</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #2196F3;">
+                <div class="img1">
+                    <img src="img/purchase3.png" alt="">
+                </div>
+                <a class="a1">小米小爱音响mini 白色</a>
+                <h3>能听会说的人工智能音响</h3>
+                <div class="price">
+                    <h2>149元</h2>
+                    <h2 class="right">169元</h2>
+                </div>
+            </li></a>
+            <a href=""><li class="list" style="border-top:1px solid #E53935;">
+                <div class="img1">
+                    <img src="img/purchase4.png" alt="">
+                </div>
+                <a class="a1">小米移动电源10000mAh高配...</a>
+                <h3>轻薄设计，轻松出行</h3>
+                <div class="price">
+                    <h2>139元</h2>
+                    <h2 class="right">149元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #FFAC13;">
+                <div class="img1">
+                    <img src="img/purchase1.png" alt="">
+                </div>
+                <a class="a1">米家随身风扇 白色</a>
+                <h3>能放在口袋的小风扇</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #83C44E;">
+                <div class="img1">
+                    <img src="img/purchase2.png" alt="">
+                </div>
+                <a class="a1">最生活毛巾·青春系列 白色</a>
+                <h3>3秒吸水，杀菌无刺激</h3>
+                <div class="price">
+                    <h2>1元</h2>
+                    <h2 class="right">19.9元</h2>
+                </div>
+            </li></a>
+            <a href=""><li style="border-top:1px solid #2196F3;">
+                <div class="img1">
+                    <img src="img/purchase3.png" alt="">
+                </div>
+                <a class="a1">小米小爱音响mini 白色</a>
+                <h3>能听会说的人工智能音响</h3>
+                <div class="price">
+                    <h2>149元</h2>
+                    <h2 class="right">169元</h2>
+                </div>
+            </li></a>
+            <a href=""><li class="list" style="border-top:1px solid #E53935;">
+                <div class="img1">
+                    <img src="img/purchase4.png" alt="">
+                </div>
+                <a class="a1">小米移动电源10000mAh高配...</a>
+                <h3>轻薄设计，轻松出行</h3>
+                <div class="price">
+                    <h2>139元</h2>
+                    <h2 class="right">149元</h2>
+                </div>
+            </li></a>
             <a href=""><li style="border-top:1px solid #FFAC13;">
                 <div class="img1">
                     <img src="img/purchase1.png" alt="">
